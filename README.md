@@ -1,19 +1,12 @@
 # HARP: Hierarchical Adaptive Ranking with Probabilistic Modeling for Skill Determination
 
-<div align="center">Accepted by <strong>CVPR 2026 Findings</strong></div>
-
-Created by Hui Yu, Xiao Ke, Zhihong Zeng, Huangbiao Xu, Huanqi Wu
-
-[📄 Paper](https://openaccess.thecvf.com/content/CVPR2026F/papers/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_paper.pdf) · [📎 Supp](https://openaccess.thecvf.com/content/CVPR2026F/supplemental/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_supp.pdf)
-
-Official PyTorch implementation of HARP.
+<div align="center">Accepted by <strong>CVPR 2026 Findings</strong> &nbsp;|&nbsp; <a href="https://openaccess.thecvf.com/content/CVPR2026F/papers/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_paper.pdf">Paper</a> &nbsp;|&nbsp; <a href="https://openaccess.thecvf.com/content/CVPR2026F/supplemental/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_supp.pdf">Supp</a></div>
 
 ## 🔍 Overview
 
 <p align="center">
   <img src="assets/model.png" width="100%" alt=""/>
 </p>
-
 <small>Our HARP extracts video features via the I3D backbone (a), refines sequential and contrastive features through parallel enhancement (b), fuses multi-level features with hierarchical dynamic feature fusion, separating skill-related semantics and suppressing noise for discriminative representations (c), and predicts skill rankings via probabilistic assessment (d), with auxiliary contrastive scores optimizing dynamic margin ranking loss in training.</small>
 
 ## 📦 Requirements
