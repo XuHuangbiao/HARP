@@ -1,6 +1,6 @@
 # HARP: Hierarchical Adaptive Ranking with Probabilistic Modeling for Skill Determination
 
-<div align="center">Accepted by <strong>CVPR 2026 Findings</strong> &nbsp;|&nbsp; <a href="https://openaccess.thecvf.com/content/CVPR2026F/papers/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_paper.pdf">Paper</a> &nbsp;|&nbsp; <a href="https://openaccess.thecvf.com/content/CVPR2026F/supplemental/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_supp.pdf">Supp</a></div>
+<div align="center">Accepted by <strong>CVPR 2026 Findings</strong> &nbsp;|&nbsp; <a href="https://openaccess.thecvf.com/content/CVPR2026F/papers/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_paper.pdf">Paper</a> &nbsp; <a href="https://openaccess.thecvf.com/content/CVPR2026F/supplemental/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_supp.pdf">
 
 ## 🔍 Overview
 
