@@ -28,6 +28,8 @@ pip install -r requirements.txt
 
 CoffeeCraft integrates professional competition footage recorded under regulated protocols with carefully screened amateur videos from public platforms, spanning the full spectrum from professional excellence to amateur execution. Pairwise supervision is derived from official competition scores and direct comparisons by certified practitioners and former judges, with label reliability enforced through multi-group agreement and golden-pair validation. A comparison with existing skill assessment datasets:
 
+<div align="center">
+
 | Dataset | Task | Videos | Pairs | Avg. Length (s) |
 |---------|------|:------:|:-----:|:---------------:|
 | EPIC-Skills | Chopstick Using | 40 | 536 | 46 ± 17 |
@@ -43,6 +45,8 @@ CoffeeCraft integrates professional competition footage recorded under regulated
 | | **Espresso** | **170** | **3980** | **195 ± 53** |
 | | **Latte Art** | **170** | **5227** | **152 ± 40** |
 | | **Moka** | **100** | **3075** | **214 ± 37** |
+
+</div>
 
 <p align="center">
   <img src="assets/info_new.png" width="100%" alt=""/>
