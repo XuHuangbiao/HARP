@@ -1,27 +1,22 @@
 # HARP: Hierarchical Adaptive Ranking with Probabilistic Modeling for Skill Determination
 
-Created by [Hui Yu](https://github.com/XuHuangbiao), Xiao Ke, Zhihong Zeng, [Huangbiao Xu](https://github.com/XuHuangbiao), Huanqi Wu
+<div align="center">Accepted by <strong>CVPR 2026 Findings</strong></div>
 
-This repository contains the PyTorch implementation and CoffeeCraft dataset for HARP (CVPR 2026 Findings).
+Created by Hui Yu, Xiao Ke, Zhihong Zeng, Huangbiao Xu, Huanqi Wu
 
-[[Paper]](https://openaccess.thecvf.com/content/CVPR2026F/papers/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_paper.pdf) [[Supp]](https://openaccess.thecvf.com/content/CVPR2026F/supplemental/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_supp.pdf)
+[📄 Paper](https://openaccess.thecvf.com/content/CVPR2026F/papers/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_paper.pdf) · [📎 Supp](https://openaccess.thecvf.com/content/CVPR2026F/supplemental/Yu_HARP_Hierarchical_Adaptive_Ranking_with_Probabilistic_Modeling_for_Skill_Determination_CVPRF_2026_supp.pdf)
 
-## Overview
+Official PyTorch implementation of HARP.
 
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="assets/model.png" width = "100%" alt=""/>
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">
-      The overall framework of HARP.
-      </div>
-</center>
+## 🔍 Overview
 
-## Requirements
+<p align="center">
+  <img src="assets/model.png" width="100%" alt=""/>
+</p>
+
+<small>Our HARP extracts video features via the I3D backbone (a), refines sequential and contrastive features through parallel enhancement (b), fuses multi-level features with hierarchical dynamic feature fusion, separating skill-related semantics and suppressing noise for discriminative representations (c), and predicts skill rankings via probabilistic assessment (d), with auxiliary contrastive scores optimizing dynamic margin ranking loss in training.</small>
+
+## 📦 Requirements
 
 ```bash
 pip install -r requirements.txt
@@ -35,7 +30,7 @@ pip install -r requirements.txt
 - torchvision
 - tqdm
 
-## CoffeeCraft Dataset
+## ☕ CoffeeCraft Dataset
 
 CoffeeCraft integrates professional competition footage recorded under regulated protocols with carefully screened amateur videos from public platforms, spanning the full spectrum from professional excellence to amateur execution. Pairwise supervision is derived from official competition scores and direct comparisons by certified practitioners and former judges, with label reliability enforced through multi-group agreement and golden-pair validation. A comparison with existing skill assessment datasets:
 
@@ -55,28 +50,19 @@ CoffeeCraft integrates professional competition footage recorded under regulated
 | | **Latte Art** | **170** | **5227** | **152 ± 40** |
 | | **Moka** | **100** | **3075** | **214 ± 37** |
 
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="assets/info_new.png" width = "100%" alt=""/>
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">
-      Overview of the CoffeeCraft dataset.
-      </div>
-</center>
+<p align="center">
+  <img src="assets/info_new.png" width="100%" alt=""/>
+  <br>
+  <sup>Overview of the CoffeeCraft dataset.</sup>
+</p>
 
-### Download
+### ⬇️ Download
 
-Download the pre-extracted I3D features from Google Drive:
-
-[Google Drive](https://drive.google.com/file/d/1AwdnpQdOUErC9N4ALXnZz5AeIpwwp9Ur/view)
+[☁️ Google Drive](https://drive.google.com/file/d/1AwdnpQdOUErC9N4ALXnZz5AeIpwwp9Ur/view)
 
 Extract and place the `CoffeeCraft/` folder under `data/`.
 
-### Data Structure
+### 📂 Data Structure
 
 ```
 data/
@@ -101,9 +87,7 @@ data/
 
 Each `.npz` file stores an I3D feature of shape `(400, 1024)`. `train.txt` / `test.txt` contain pairwise comparisons in the format `better_video worse_video`.
 
-## Training
-
-Training on a single NVIDIA GPU.
+## 🚀 Training
 
 ```bash
 # CoffeeCraft - brewing
@@ -121,9 +105,7 @@ CUDA_VISIBLE_DEVICES=0 python -u train.py --benchmark CoffeeCraft --task moka --
 
 Configuration files are in `configs/`. Key hyperparameters can be modified via command line or `configs/CoffeeCraft.yaml`.
 
-## Test
-
-To test the trained model:
+## 🧪 Test
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python -u train.py --benchmark CoffeeCraft --task brewing --phase test --ckpts exps/CoffeeCraft/brewing/default/weights/best.pth
@@ -131,7 +113,7 @@ CUDA_VISIBLE_DEVICES=0 python -u train.py --benchmark CoffeeCraft --task brewing
 
 Checkpoints and logs are saved under `exps/CoffeeCraft/<task>/<exp_name>/`.
 
-## Results
+## 📊 Results
 
 | Dataset | Accuracy |
 |---------|----------|
@@ -139,7 +121,7 @@ Checkpoints and logs are saved under `exps/CoffeeCraft/<task>/<exp_name>/`.
 | BEST | **87.53%** |
 | CoffeeCraft | **74.84%** |
 
-## Reference
+## 📝 Reference
 
 ```bibtex
 @InProceedings{Yu2026HARP,
