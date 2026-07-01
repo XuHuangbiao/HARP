@@ -1,0 +1,52 @@
+data_root : 'data/CoffeeCraft'
+train_pair_path : ''
+test_pair_path : ''
+feature_path : ''
+ftr_tmpl : '{}.npz'
+
+bs_train : 16
+bs_test : 16
+workers : 16
+max_epoch : 200
+start_epoch: 0     
+current_epoch : 0
+warmup_epochs : 3
+eta_min: 0.00005
+
+optimizer: AdamW
+weight_decay : 0.00001
+base_lr: 0.0001
+
+models:
+  d_model: 256
+  res_hid_fac: 1
+  in_dae : 128
+  ffn_fac : 2
+  in_features : 1024
+  num_head : 16
+  nlayer : 2
+  dropout_rate : 0.2
+  num_cls : 13
+  node_array: [8, 4, 2, 1]
+
+  seq_len: 400
+
+loss_param:
+  m1: 1.25
+  m2: 0.4
+  m3: 1.2
+  mvp_alpha: 1.0
+  mvp_beta: 1.0
+  mvp_gamma: 0.0
+  dym_alpha: 1.0
+  dym_beta: 0.5
+
+is_training : True
+
+data_aug:
+  noise_mean: 0.0
+  noise_std: 0.01
+  dropout_prob: 0.0
+  reverse_prob: 0.0
+  scale_range_diff: 0.0
+  target_len: 400

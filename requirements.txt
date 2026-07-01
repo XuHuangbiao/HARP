@@ -1,0 +1,7 @@
+numpy
+PyYAML
+scipy
+thop
+torch
+torchvision
+tqdm
